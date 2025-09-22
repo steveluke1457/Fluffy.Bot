@@ -1,11 +1,7 @@
 from keep_alive import keep_alive
-
-# Start webserver for UptimeRobot
-keep_alive()
-
+keep_alive()  # Start webserver for UptimeRobot
 
 import discord
-from discord.ext import tasks
 from discord import app_commands
 from datetime import datetime
 import asyncio
@@ -13,8 +9,8 @@ import json
 import os
 
 # ---------------- CONFIG ----------------
-OWNER_ID = 1301533813381402706  # Your Discord ID
-TOKEN = os.getenv("DISCORD_TOKEN")  # Stored in GitHub Secrets
+OWNER_ID = 1301533813381402706  # Replace with your Discord ID
+TOKEN = os.getenv("DISCORD_TOKEN")  # Store token in GitHub Secrets
 SCHEDULE_FILE = "schedules.json"
 
 intents = discord.Intents.default()
